@@ -8,13 +8,13 @@
 </head>
 <body>
     <script>
-        var funcs = []
-        for (var i = 0; i < 10; i++) {
-            funcs.push(function() { console.log(i) })
-        }
-        funcs.forEach(function(func) {
-            func()
-        })
+        // var funcs = []
+        // for (var i = 0; i < 10; i++) {
+        //     funcs.push(function() { console.log(i) })
+        // }
+        // funcs.forEach(function(func) {
+        //     func()
+        // })
 
         // var funcs = []
         // for (var i = 0; i < 10; i++) {
@@ -39,6 +39,12 @@
         //     }
         //     funcs.forEach(func => func())
 
+        // 定义对象常量
+        const OBJ = {a: 100};
+        Object.freeze(OBJ);
+        OBJ.a = 200;
+        console.log(OBJ.a);
+    // 100
 
     </script>
 </body>

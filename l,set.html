@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var s = new Set();
+        s.add('a');
+        s.add('b');
+        s.add('c');
+        console.log(s)
+        // s.delete(2)  删除
+        // s.clear() //清空
+        // console.log(s)
+        // s.size() //长度????
+        // var keys = s.keys();
+        // console.log(keys)
+        // var values = s.values();
+        // for (var v of values) {
+        //     console.log(v);
+        // }
+        var entries = s.entries(); // 将key和value 组合成一个数组返回
+        for (var e of entries) {
+            console.log(e);
+        }
+    </script>
+</body>
+
+</html>

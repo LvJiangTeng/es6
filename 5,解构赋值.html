@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
     <script>
         //对象
@@ -22,15 +24,107 @@
         // console.log(second) //'blue'
 
 
-        // 第二题
-      
-        const request={body:{
-            username:"hh",
-            password:"hhjj",
-        },footer:"hehehe"}
-         const { body, body: { username, password } } = request
-         console.log(body)
-         console.log(username,password)
+        // // 第二题
+
+        // const request={body:{
+        //     username:"hh",
+        //     password:"hhjj",
+        // },footer:"hehehe"}
+        //  const { body, body: { username, password } } = request
+        //  console.log(body)
+        //  console.log(username,password)
+        // function addit(...theNumbers, rrrr = true) {
+        //     console.log(rrrr)
+        //     console.log(theNumbers)
+        //     // get the sum of the array elements
+
+        //     return theNumbers.reduce((prevnum, curnum) => prevnum + curnum, 0)
+
+        // }
+        // console.log(addit(1, 2, 3, 4)) // returns 10
+
+
+        // let [x = 1] = [undefined]
+        // console.log(x)
+        // let [y = 1] = []
+        // console.log(y)
+
+        // function f() {
+        //     console.log('aaa');
+        // }
+        // let [x = f()] = [1]; // x === 1
+        // console.log(x) //在此处后面有具体的值，就不需要计算默认值, 赋值是从右往左运行
+
+
+        // let [x = 1, y = x] = [1, 2];
+        // console.log(x, y) //1,2
+        // let arr = [1, 2, 3];
+        // let {
+        //     0: first,
+        //     [arr.length - 1]: last
+        // } = arr;
+        // console.log(first, last)
+
+
+        // let obj = {
+        //     p: [
+        //         'Hello',
+        //         {
+        //             y: 'World'
+        //         }
+        //     ]
+        // };
+        // let {
+        //     p: [x, {
+        //         y
+        //     }]
+        // } = obj
+        // console.log(x, y)
+
+        // let x; {
+        //     x
+        // } = {
+        //     x: 1
+        // };
+        // 报错: 因为JavaScript引擎会将{x}理解成一个代码块，从而发生语法错误。
+        // 应该不将大括号写在行首，避免JavaScript将其解释为代码块, 正确的写法:
+        // let x;
+        // ({
+        //     x
+        // } = {
+        //     x: 1
+        // })
+        // console.log(x)
+
+        // 第三个参数默认值为 {}
+        // function demo(a, b, {
+        //     c,
+        //     d
+        // } = {}) {
+        //     console.log(a, b, c, d)
+        //     // 1  2 'c' 'd'
+        // }
+        // demo(1, 2, {
+        //     c: 3,
+        //     d: 4,
+        // })
+
+        // let {
+        //     length
+        // } = 'hello';
+        // console.log(length) //5
+        // let {
+        //     fff
+        // } = 'hello';
+        // console.log(fff) //undefined
+
+        // 所以可以交换变量的值
+        let x = 1;
+        let y = 2;
+        [x, y] = [y, x];
+        console.log(x)
+        console.log(y)
     </script>
 </body>
+
 </html>

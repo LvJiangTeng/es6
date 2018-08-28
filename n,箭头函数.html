@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var countup = {
+        //     counter: 15,
+        //     start: function () {
+        //         window.addEventListener('click', function () {
+        //             console.log(this)
+        //             console.log(this.counter)
+        //         })
+        //     },
+        //     end: function () {
+        //         window.addEventListener('click', () => {
+        //             console.log(this)
+        //             console.log(this.counter)
+        //         })
+        //     }
+        // };
+        // countup.start()
+        // countup.end()
+        function Person() {
+            this.age = 0;
+            setInterval(() => {
+                // 回调里面的 `this` 变量就指向了期望的那个对象了
+                this.age++;
+            }, 3000);
+        }
+        var p = new Person();
+        console.log(p.age)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getasync(url) { // same as original function
+
+            return new Promise((resolve, reject) => {
+
+                const xhr = new XMLHttpRequest()
+
+                xhr.open("GET", url)
+
+                xhr.onload = () => resolve(xhr.responseText)
+
+                xhr.onerror = () => reject(xhr.statusText)
+
+                xhr.send()
+
+            })
+
+        }
+        async function fetchdata() { // main Async function
+
+            var text1 = await getasync('test.txt')
+
+            console.log(text1)
+
+            var text2 = await getasync('test2.txt')
+
+            console.log(text2)
+
+            var text3 = await getasync('test3.txt')
+
+            console.log(text3)
+
+            return "Finished"
+
+        }
+        fetchdata().then((msg) => {
+
+            console.log(msg) // logs "finished"
+
+        })
+    </script>
+</body>
+
+</html>
