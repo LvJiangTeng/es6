@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1 键值对重名
+        // function people(name, age) {
+        //     return {
+        //         name,
+        //         age
+        //     };
+        // }
+
+        // 2 省略冒号括号
+        // const people = {
+        //     name: 'lux',
+        //     getName () {
+        //         console.log(this.name)
+        //     }
+        // }
+
+        // 3，object.assign
+        const objA = { name: 'cc', age: 18 }
+        const objB = { name: 'cec',address: 'beijing' }
+        const objC=Object.assign({},objA,objB)
+        console.log(objC)
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function action(num = 200,hehe=100) {
+        console.log(num,hehe)
+    }
+    action(0,null) // 0
+    action() //200
+    action(300) //300
+    //箭头函数
+    console.log([1,2,3].map(x => x + 1))
+    var people = name => 'hello' + name
+    console.log(people(1))
+
+    // 请使用ES6重构以下代码
+    
+    var calculate = function(x, y, z) {
+      if (typeof x != 'number') { x = 0 }
+      if (typeof y != 'number') { y = 6 }
+
+      var dwt = x % y
+      var result
+
+      if (dwt == z) { result = true }
+      if (dwt != z) { result = false }
+      
+      return result
+    }
+    const calculate1=(x,y,z)=>{
+        x=typeof x== 'number'?x:0
+        y=typeof y== 'number'?y:6
+        return x%y===z
+    }
+console.log(calculate1(1,2,3))
+    </script>
+</body>
+</html>

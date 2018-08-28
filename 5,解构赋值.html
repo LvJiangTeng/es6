@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //对象
+        // const people = {
+        //     name: 'lux',
+        //     age: 20
+        // }
+        // const { name, age } = people
+        // console.log(`${name} --- ${age}`)
+        // //数组
+        // const color = ['red', 'blue']
+        // const [first, second] = color
+        // console.log(first) //'red'
+        // console.log(second) //'blue'
+
+
+        // 第二题
+      
+        const request={body:{
+            username:"hh",
+            password:"hhjj",
+        },footer:"hehehe"}
+         const { body, body: { username, password } } = request
+         console.log(body)
+         console.log(username,password)
+    </script>
+</body>
+</html>
