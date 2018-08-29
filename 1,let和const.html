@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
     <script>
         // var funcs = []
@@ -39,13 +41,49 @@
         //     }
         //     funcs.forEach(func => func())
 
-        // 定义对象常量
-        const OBJ = {a: 100};
-        Object.freeze(OBJ);
-        OBJ.a = 200;
-        console.log(OBJ.a);
-    // 100
+        //     // 定义对象常量
+        //     const OBJ = {a: 100};
+        //     Object.freeze(OBJ);
+        //     OBJ.a = 200;
+        //     console.log(OBJ.a);
+        // // 100
 
+        // var tmp = new Date();
+
+        // function f() {
+        //     console.log(tmp);
+        //     if (false) {
+        //         var tmp = 'hello world';
+        //     }
+        // }
+
+        // f(); // undefined
+        // var tmp = new Date();
+
+        // function f() {
+        //     console.log(tmp);
+        //     if (false) {
+        //         let tmp = 'hello world';
+        //     }
+        // }
+
+        // f(); // 正确时间
+
+        function f() {
+            console.log('I am outside!');
+        }
+
+        (function () {
+            if (false) {
+                // 重复声明一次函数f
+                function f() {
+                    console.log('I am inside!');
+                }
+            }
+
+            f();
+        }());
     </script>
 </body>
+
 </html>
